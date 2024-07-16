@@ -20,9 +20,6 @@ public:
 	* ∑µªÿ÷µ£∫Œﬁ
 	*/
 	HugeInteger() {
-		/*for (auto& num : digits) {
-			num = 0;
-		}*/
 		for (int i = 0; i < MAXN; i++) {
 			digits[i] = 0;
 		}
@@ -295,6 +292,21 @@ public:
 	HugeInteger& operator-= (const HugeInteger& num) {
 		*this = *this - num;
 		return *this;
+	}
+
+
+	operator std::string() {
+		std::string res;
+		bool flag = false;
+		for (int i = MAXN - 1; i >= 0; i--) {
+			if (digits[i] != 0) {
+				flag = true;
+			}
+			if (flag) {
+				res.push_back(digits[i] + '0');
+			}
+		}
+		return res;
 	}
 };
 /*
