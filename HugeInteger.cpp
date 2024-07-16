@@ -339,9 +339,12 @@ int main() {
 	d+=2;
 	cout << d << endl<<endl;
 
-	HugeInteger e = 1000000;
+	HugeInteger e = 1000005;
 	cout << e << endl;
 	e-=1;
-	cout << e << endl;
+	cout << e << endl<<endl;
+
+	std::string SS = e;
+	cout << SS << endl;
 	return 0;
 }
